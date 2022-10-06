@@ -28,5 +28,13 @@ es.index(
   'quote': 'It is not this day2.'
  })
 
+# insert without id (auto-generated)
+es.index(
+ index='lord-of-the-rings',
+ body={
+  'character': 'Gandalf',
+  'quote': 'Wizards and tricksters.'
+ })
+
 pprint(es.indices.refresh(index='lord-of-the-rings'))
 
